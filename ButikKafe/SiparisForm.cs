@@ -32,6 +32,21 @@ namespace ButikKafe
             cboUrunler.DataSource = db.Urunler;
             dgvSiparisDetaylar.DataSource = blSiparisDetaylar;
             lblOdemeTutari.Text = siparis.ToplamTutarTL;
+
+            MasaNolariYukle();
+        }
+
+        private void MasaNolariYukle()
+        {
+            cboMasaNolar.Items.Clear();
+            for (int i = 1; i <= 20; i++)
+            {
+                if (!db.MasaDoluMu(i) || i == siparis.MasaNo)
+                {
+                    cboMasaNolar.Items.Add(i);
+                }
+                cboMasaNolar.SelectedItem = siparis.MasaNo;
+            }
         }
 
         private void BlSiparisDetaylar_ListChanged(object sender, ListChangedEventArgs e)
@@ -88,6 +103,24 @@ namespace ButikKafe
                 db.MasayiKapat(siparis.MasaNo, SiparisDurum.Odendi);
                 Close();
             }
+        }
+
+        private void btnMasaTasi_Click(object sender, EventArgs e)
+        {
+            int hedefMasaNo = (int)cboMasaNolar.SelectedItem;
+            int kaynakMasaNo = siparis.MasaNo;
+            if (hedefMasaNo == siparis.MasaNo)
+            {
+                return;
+            }
+
+            // hedef masa boş, taşımaya başla
+            siparis.MasaNo = hedefMasaNo;
+            Text = "Masa " + siparis.MasaNo;
+            lblMasaNo.Text = string.Format("{0:00}",siparis.MasaNo);
+
+            ((Form1)Owner).MasaTasi(kaynakMasaNo, hedefMasaNo);
+                
         }
     }
 }

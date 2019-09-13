@@ -57,6 +57,12 @@
             // 
             // nudBirimFiyat
             // 
+            this.nudBirimFiyat.DecimalPlaces = 2;
+            this.nudBirimFiyat.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
             this.nudBirimFiyat.Location = new System.Drawing.Point(128, 33);
             this.nudBirimFiyat.Name = "nudBirimFiyat";
             this.nudBirimFiyat.Size = new System.Drawing.Size(97, 23);
@@ -71,6 +77,7 @@
             this.btnUrunEkle.TabIndex = 3;
             this.btnUrunEkle.Text = "EKLE";
             this.btnUrunEkle.UseVisualStyleBackColor = true;
+            this.btnUrunEkle.Click += new System.EventHandler(this.btnUrunEkle_Click);
             // 
             // label2
             // 
@@ -87,8 +94,10 @@
             this.dgvUrunler.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvUrunler.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvUrunler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUrunler.Location = new System.Drawing.Point(12, 62);
+            this.dgvUrunler.MultiSelect = false;
             this.dgvUrunler.Name = "dgvUrunler";
             this.dgvUrunler.Size = new System.Drawing.Size(409, 316);
             this.dgvUrunler.TabIndex = 5;

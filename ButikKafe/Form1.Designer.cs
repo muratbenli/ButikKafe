@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.ürünlerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.geçmişSiparişlerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnUrunler = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnGecmisSiparisler = new System.Windows.Forms.ToolStripMenuItem();
             this.lvwMasalar = new System.Windows.Forms.ListView();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -38,8 +38,8 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ürünlerToolStripMenuItem,
-            this.geçmişSiparişlerToolStripMenuItem});
+            this.btnUrunler,
+            this.btnGecmisSiparisler});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
@@ -47,19 +47,21 @@
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // ürünlerToolStripMenuItem
+            // btnUrunler
             // 
-            this.ürünlerToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.ürünlerToolStripMenuItem.Name = "ürünlerToolStripMenuItem";
-            this.ürünlerToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.ürünlerToolStripMenuItem.Text = "Ürünler";
+            this.btnUrunler.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnUrunler.Name = "btnUrunler";
+            this.btnUrunler.Size = new System.Drawing.Size(61, 20);
+            this.btnUrunler.Text = "Ürünler";
+            this.btnUrunler.Click += new System.EventHandler(this.btnUrunler_Click);
             // 
-            // geçmişSiparişlerToolStripMenuItem
+            // btnGecmisSiparisler
             // 
-            this.geçmişSiparişlerToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.geçmişSiparişlerToolStripMenuItem.Name = "geçmişSiparişlerToolStripMenuItem";
-            this.geçmişSiparişlerToolStripMenuItem.Size = new System.Drawing.Size(113, 20);
-            this.geçmişSiparişlerToolStripMenuItem.Text = "Geçmiş Siparişler";
+            this.btnGecmisSiparisler.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGecmisSiparisler.Name = "btnGecmisSiparisler";
+            this.btnGecmisSiparisler.Size = new System.Drawing.Size(113, 20);
+            this.btnGecmisSiparisler.Text = "Geçmiş Siparişler";
+            this.btnGecmisSiparisler.Click += new System.EventHandler(this.btnGecmisSiparisler_Click);
             // 
             // lvwMasalar
             // 
@@ -94,8 +96,8 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem ürünlerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem geçmişSiparişlerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem btnUrunler;
+        private System.Windows.Forms.ToolStripMenuItem btnGecmisSiparisler;
         private System.Windows.Forms.ListView lvwMasalar;
     }
 }

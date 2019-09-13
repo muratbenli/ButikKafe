@@ -40,6 +40,9 @@
             this.btnAnaSayfa = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.lblOdemeTutari = new System.Windows.Forms.Label();
+            this.cboMasaNolar = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnMasaTasi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSiparisDetaylar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudUrunAdet)).BeginInit();
             this.SuspendLayout();
@@ -73,7 +76,7 @@
             this.dgvSiparisDetaylar.Name = "dgvSiparisDetaylar";
             this.dgvSiparisDetaylar.ReadOnly = true;
             this.dgvSiparisDetaylar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSiparisDetaylar.Size = new System.Drawing.Size(445, 283);
+            this.dgvSiparisDetaylar.Size = new System.Drawing.Size(445, 316);
             this.dgvSiparisDetaylar.TabIndex = 2;
             // 
             // cboUrunler
@@ -124,7 +127,7 @@
             // 
             this.btnSiparisIptal.BackColor = System.Drawing.Color.Red;
             this.btnSiparisIptal.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnSiparisIptal.Location = new System.Drawing.Point(451, 204);
+            this.btnSiparisIptal.Location = new System.Drawing.Point(455, 237);
             this.btnSiparisIptal.Name = "btnSiparisIptal";
             this.btnSiparisIptal.Size = new System.Drawing.Size(132, 63);
             this.btnSiparisIptal.TabIndex = 7;
@@ -136,7 +139,7 @@
             // 
             this.btnOdemeAl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnOdemeAl.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnOdemeAl.Location = new System.Drawing.Point(589, 204);
+            this.btnOdemeAl.Location = new System.Drawing.Point(589, 237);
             this.btnOdemeAl.Name = "btnOdemeAl";
             this.btnOdemeAl.Size = new System.Drawing.Size(132, 63);
             this.btnOdemeAl.TabIndex = 8;
@@ -148,9 +151,9 @@
             // 
             this.btnAnaSayfa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnAnaSayfa.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnAnaSayfa.Location = new System.Drawing.Point(451, 273);
+            this.btnAnaSayfa.Location = new System.Drawing.Point(455, 306);
             this.btnAnaSayfa.Name = "btnAnaSayfa";
-            this.btnAnaSayfa.Size = new System.Drawing.Size(270, 63);
+            this.btnAnaSayfa.Size = new System.Drawing.Size(266, 63);
             this.btnAnaSayfa.TabIndex = 9;
             this.btnAnaSayfa.Text = "ANASAYFAYA DÖN";
             this.btnAnaSayfa.UseVisualStyleBackColor = false;
@@ -159,8 +162,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(451, 180);
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.Location = new System.Drawing.Point(451, 178);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(106, 19);
             this.label4.TabIndex = 10;
@@ -169,19 +174,55 @@
             // lblOdemeTutari
             // 
             this.lblOdemeTutari.AutoSize = true;
+            this.lblOdemeTutari.BackColor = System.Drawing.Color.Black;
             this.lblOdemeTutari.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblOdemeTutari.Location = new System.Drawing.Point(563, 180);
+            this.lblOdemeTutari.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblOdemeTutari.Location = new System.Drawing.Point(563, 178);
             this.lblOdemeTutari.Name = "lblOdemeTutari";
             this.lblOdemeTutari.Size = new System.Drawing.Size(61, 19);
             this.lblOdemeTutari.TabIndex = 11;
             this.lblOdemeTutari.Text = "0,00 TL";
+            // 
+            // cboMasaNolar
+            // 
+            this.cboMasaNolar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboMasaNolar.FormattingEnabled = true;
+            this.cboMasaNolar.Location = new System.Drawing.Point(538, 210);
+            this.cboMasaNolar.Name = "cboMasaNolar";
+            this.cboMasaNolar.Size = new System.Drawing.Size(86, 21);
+            this.cboMasaNolar.TabIndex = 12;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Location = new System.Drawing.Point(455, 212);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(77, 19);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Masa No:";
+            // 
+            // btnMasaTasi
+            // 
+            this.btnMasaTasi.BackColor = System.Drawing.Color.Cyan;
+            this.btnMasaTasi.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnMasaTasi.Location = new System.Drawing.Point(630, 178);
+            this.btnMasaTasi.Name = "btnMasaTasi";
+            this.btnMasaTasi.Size = new System.Drawing.Size(91, 53);
+            this.btnMasaTasi.TabIndex = 14;
+            this.btnMasaTasi.Text = "MASA AKTAR";
+            this.btnMasaTasi.UseVisualStyleBackColor = false;
+            this.btnMasaTasi.Click += new System.EventHandler(this.btnMasaTasi_Click);
             // 
             // SiparisForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(730, 346);
+            this.ClientSize = new System.Drawing.Size(731, 375);
+            this.Controls.Add(this.btnMasaTasi);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.cboMasaNolar);
             this.Controls.Add(this.lblOdemeTutari);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnAnaSayfa);
@@ -219,5 +260,8 @@
         private System.Windows.Forms.Button btnAnaSayfa;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblOdemeTutari;
+        private System.Windows.Forms.ComboBox cboMasaNolar;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnMasaTasi;
     }
 }
