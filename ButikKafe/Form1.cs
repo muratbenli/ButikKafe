@@ -61,13 +61,9 @@ namespace ButikKafe
                 masaNo = i + 1;
                 lvi = new ListViewItem("Masa " + masaNo);
                 lvwMasalar.Items.Add(lvi);
-
                 lvi.ImageKey = db.MasaDoluMu(masaNo) ? "dolu" : "bos";
-                
-
                 lvi.Tag = masaNo;
-
-
+                
             }
             #endregion
         }
@@ -89,6 +85,11 @@ namespace ButikKafe
             // ve ilgili masanın sipariş formunu aç
             SiparisForm siparisForm = new SiparisForm(db, siparis);
             siparisForm.ShowDialog();
+
+            if (siparis.Durum != SiparisDurum.Aktif)
+            {
+                tiklanan.ImageKey = "bos";
+            }
         }
 
         private void VerileriYaz()

@@ -111,7 +111,8 @@
             // lblMasaNo
             // 
             this.lblMasaNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblMasaNo.Font = new System.Drawing.Font("Times New Roman", 80F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblMasaNo.Font = new System.Drawing.Font("Times New Roman", 90F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblMasaNo.ForeColor = System.Drawing.Color.White;
             this.lblMasaNo.Location = new System.Drawing.Point(455, 25);
             this.lblMasaNo.Name = "lblMasaNo";
             this.lblMasaNo.Size = new System.Drawing.Size(266, 144);
@@ -129,6 +130,7 @@
             this.btnSiparisIptal.TabIndex = 7;
             this.btnSiparisIptal.Text = "TÜM SİPARİŞİ İPTAL ET";
             this.btnSiparisIptal.UseVisualStyleBackColor = false;
+            this.btnSiparisIptal.Click += new System.EventHandler(this.btnSiparisIptal_Click);
             // 
             // btnOdemeAl
             // 
@@ -140,6 +142,7 @@
             this.btnOdemeAl.TabIndex = 8;
             this.btnOdemeAl.Text = "ÖDEME ALINDI HESABI KAPAT";
             this.btnOdemeAl.UseVisualStyleBackColor = false;
+            this.btnOdemeAl.Click += new System.EventHandler(this.btnOdemeAl_Click);
             // 
             // btnAnaSayfa
             // 
