@@ -53,5 +53,10 @@ namespace ButikKafe
             blSiparisDetaylar.Add(sd);
 
         }
+
+        private void btnAnaSayfa_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
